@@ -8,7 +8,7 @@ using Dynamitey;
 using Dynamitey.DynamicObjects;
 using ImpromptuInterface;
 
-#if !NETCOREAPP2_0
+#if !NETSTANDARD2_1
 using IronPython.Hosting;
 using Microsoft.Scripting;
 #endif
@@ -73,7 +73,7 @@ namespace UnitTestImpromptuInterface
 
         private dynamic RunPythonHelper( object linq, string code)
         {
-#if !NETCOREAPP2_0
+#if !NETSTANDARD2_1
 
             var tEngine = Python.CreateEngine();
             var tScope = tEngine.CreateScope();

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net462;netstandard2.1</TargetFrameworks>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
     <Description>A Lightweight Duck Casting Framework for dynamic C#</Description>
@@ -15,15 +15,16 @@
     <IncludeSource>True</IncludeSource>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>7.1.0</Version>
   </PropertyGroup>
   <Import Project="..\Version.props" />
   <ItemGroup>
     <PackageReference Include="Dynamitey" Version="2.0.*" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net40'">
+  <ItemGroup Condition="'$(TargetFramework)'=='net462'">
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
     <PackageReference Include="System.Reflection.Emit" Version="4.3.*" />
     <PackageReference Include="Microsoft.CSharp" Version="4.4.*" />
   </ItemGroup>

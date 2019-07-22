@@ -30,7 +30,7 @@ namespace ImpromptuInterface.Build
 
 
 
-#if NET40
+#if NET462
     internal static class CompatHelper
     {
         public static Type GetTypeInfo(this Type type) => type;
@@ -78,7 +78,7 @@ namespace ImpromptuInterface.Build
         }
 
 
-#if NET40
+#if NET462
 
         internal class TempBuilder : IDisposable
         {
@@ -1736,7 +1736,7 @@ namespace ImpromptuInterface.Build
                     tName,
                     access);
 
-#if NET40
+#if NET462
             if (access== AssemblyBuilderAccess.RunAndSave || access == AssemblyBuilderAccess.Save)
                 mb = ab.DefineDynamicModule("MainModule", string.Format("{0}.dll", tName.Name));
             else

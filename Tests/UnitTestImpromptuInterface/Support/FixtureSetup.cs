@@ -8,7 +8,7 @@ using ImpromptuInterface.Build;
 
 namespace UnitTestImpromptuInterface
 {
-#if !SILVERLIGHT && !SELFRUNNER && !NETCOREAPP2_0
+#if !SILVERLIGHT && !SELFRUNNER && !NETSTANDARD2_1
 
     using NUnit.Framework;
     [SetUpFixture]
